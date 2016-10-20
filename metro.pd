@@ -1,0 +1,32 @@
+#N canvas -8 22 1366 695 10;
+#X obj 254 99 metro;
+#X obj 254 129 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 254 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 281 68 r tempo_ms;
+#X obj 104 67 r tempo_bpm;
+#X obj 104 127 s tempo_ms;
+#X floatatom 346 69 5 0 0 0 - - -;
+#X floatatom 175 68 5 0 0 0 - - -;
+#X obj -196 69 hradio 15 1 0 4 tempo_index empty Tempo 0 -8 0 10 -262144
+-1 -1 0;
+#X obj -46 67 r tempo_index;
+#X floatatom 37 68 5 0 0 0 - - -;
+#X obj -46 97 expr ($f1 + 1) * 30;
+#X floatatom 25 128 5 0 0 0 - - -;
+#X obj -46 127 s tempo_bpm;
+#X obj 104 97 expr 60000 / $f1;
+#X floatatom 169 128 5 0 0 0 - - -;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 3 0 0 1;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 4 0 14 0;
+#X connect 9 0 10 0;
+#X connect 9 0 11 0;
+#X connect 11 0 12 0;
+#X connect 11 0 13 0;
+#X connect 14 0 5 0;
+#X connect 14 0 15 0;
