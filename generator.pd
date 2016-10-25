@@ -5,7 +5,7 @@
 #X obj 104 127 s tempo_ms;
 #X floatatom 346 99 5 0 0 0 - - -;
 #X floatatom 175 68 5 0 0 0 - - -;
-#X obj -179 129 hradio 15 1 0 4 tempo_raw empty tempo_raw 0 -8 0 10
+#X obj -179 129 hradio 15 1 0 6 tempo_raw empty tempo_raw 0 -8 0 10
 -262144 -1 -1 0;
 #X floatatom 25 68 5 0 0 0 - - -;
 #X floatatom 25 128 5 0 0 0 - - -;
@@ -38,7 +38,7 @@
 #X obj -196 219 hradio 15 1 0 4 empty note_index note_index 0 -8 0
 10 -262144 -1 -1 0;
 #X obj -196 249 hradio 15 1 0 12 empty row_index row_index 0 -8 0 10
--262144 -1 -1 9;
+-262144 -1 -1 4;
 #X connect 0 0 12 0;
 #X connect 0 0 13 0;
 #X connect 1 0 0 1;
