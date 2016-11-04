@@ -11,6 +11,26 @@
 #X floatatom 295 127 5 0 0 0 - - -;
 #X floatatom 365 127 5 0 0 0 - - -;
 #X floatatom 435 127 5 0 0 0 - - -;
+#X text 153 141 DELTA;
+#X text 223 141 THETA;
+#X text 293 141 ALPHA;
+#X text 363 141 BETA;
+#X text 433 141 GAMMA;
+#X obj 155 177 osc/routeOSC /muse/elements/delta_absolute /muse/elements/theta_absolute
+/muse/elements/alpha_absolute /muse/elements/beta_absolute /muse/elements/gamma_absolute
+;
+#X floatatom 155 234 5 0 0 0 - - -;
+#X floatatom 225 234 5 0 0 0 - - -;
+#X floatatom 295 234 5 0 0 0 - - -;
+#X floatatom 365 234 5 0 0 0 - - -;
+#X floatatom 435 234 5 0 0 0 - - -;
+#X text 153 248 DELTA;
+#X text 223 248 THETA;
+#X text 293 248 ALPHA;
+#X text 363 248 BETA;
+#X text 433 248 GAMMA;
+#X text 81 141 RELATIVE;
+#X text 81 248 ABSOLUTE;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 3 0 4 0;
@@ -18,3 +38,9 @@
 #X connect 3 2 6 0;
 #X connect 3 3 7 0;
 #X connect 3 4 8 0;
+#X connect 3 5 14 0;
+#X connect 14 0 15 0;
+#X connect 14 1 16 0;
+#X connect 14 2 17 0;
+#X connect 14 3 18 0;
+#X connect 14 4 19 0;

@@ -1,4 +1,4 @@
-#N canvas -8 -8 1366 725 10;
+#N canvas 0 0 1354 683 10;
 #X obj 254 129 metro;
 #X obj 281 98 r tempo_ms;
 #X obj 104 67 r tempo_bpm;
@@ -36,9 +36,9 @@
 #X obj 404 158 s note_index;
 #X obj 554 188 s row_index;
 #X obj -196 219 hradio 15 1 0 4 empty note_index note_index 0 -8 0
-10 -262144 -1 -1 0;
+10 -262144 -1 -1 3;
 #X obj -196 249 hradio 15 1 0 12 empty row_index row_index 0 -8 0 10
--262144 -1 -1 4;
+-262144 -1 -1 9;
 #X connect 0 0 12 0;
 #X connect 0 0 13 0;
 #X connect 1 0 0 1;
