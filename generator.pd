@@ -1,5 +1,5 @@
-#N canvas 130 112 373 173 10;
-#N canvas 895 120 210 483 metro 1;
+#N canvas 148 222 573 363 10;
+#N canvas 895 120 210 445 metro 0;
 #X obj -46 -41 metro;
 #X obj -46 -11 t b b;
 #X obj -19 49 expr $f1 % 4;
@@ -41,7 +41,7 @@
 #X connect 18 0 17 0;
 #X connect 18 1 5 0;
 #X restore 104 91 pd metro;
-#N canvas 720 312 582 324 sequencer 1;
+#N canvas 720 312 582 324 sequencer 0;
 #X obj 54 69 sel 0 1 2 3 4 5 6 7 8 9 10 11;
 #X obj 54 189 i;
 #X floatatom 69 40 5 0 0 0 - - -;
@@ -150,7 +150,7 @@
 #X connect 5 0 6 0;
 #X restore 173 91 pd sequence_chooser;
 #X obj -46 61 hradio 17 1 0 6 tempo empty tempo 0 -8 0 10 -262144 -1
--1 2;
+-1 0;
 #X obj -46 1 tgl 17 0 master_toggle empty master_toggle 19 8 0 10 -262144
 -1 -1 1 1;
 #X obj -46 121 hradio 17 1 0 4 sequence empty sequence 0 -8 0 10 -262144
@@ -160,10 +160,66 @@
 #X obj -76 91 loadbang;
 #X obj -76 31 loadbang;
 #X obj 173 61 r sequence;
+#N canvas 739 69 450 300 synthesizer 1;
+#X obj 12 11 inlet;
+#X obj 194 195 delay;
+#X obj 221 165 * 15;
+#X obj 221 135 min;
+#X msg 194 225 0;
+#X obj 194 45 t b b b;
+#X obj 221 75 random 50;
+#X obj 236 105 random 50;
+#X obj 111 102 random 1;
+#X obj 126 132 random 1;
+#X obj 111 162 max;
+#X obj 111 192 * 0.3;
+#X obj 111 72 t b b;
+#X obj 35 141 mtof;
+#X obj 38 181 osc~;
+#X obj 39 220 *~;
+#X obj 53 264 dac~;
+#X obj 83 35 t f b b;
+#X floatatom 36 106 5 0 0 0 - - -;
+#X floatatom 92 226 5 0 0 0 - - -;
+#X obj 171 44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 153 228 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 89 67 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X connect 0 0 17 0;
+#X connect 1 0 4 0;
+#X connect 2 0 1 1;
+#X connect 3 0 2 0;
+#X connect 4 0 21 0;
+#X connect 5 0 1 0;
+#X connect 5 1 6 0;
+#X connect 5 2 7 0;
+#X connect 6 0 3 0;
+#X connect 7 0 3 1;
+#X connect 8 0 10 0;
+#X connect 9 0 10 1;
+#X connect 10 0 11 0;
+#X connect 11 0 19 0;
+#X connect 12 0 8 0;
+#X connect 12 1 9 0;
+#X connect 13 0 14 0;
+#X connect 14 0 15 0;
+#X connect 15 0 16 0;
+#X connect 17 0 18 0;
+#X connect 17 1 22 0;
+#X connect 17 2 20 0;
+#X connect 18 0 13 0;
+#X connect 19 0 15 1;
+#X connect 20 0 5 0;
+#X connect 21 0 19 0;
+#X connect 22 0 12 0;
+#X restore 104 181 pd synthesizer;
 #X connect 0 0 1 0;
 #X connect 0 2 1 1;
 #X connect 1 0 2 0;
 #X connect 1 0 3 0;
+#X connect 2 0 13 0;
 #X connect 4 0 1 2;
 #X connect 8 0 0 0;
 #X connect 9 0 0 1;
